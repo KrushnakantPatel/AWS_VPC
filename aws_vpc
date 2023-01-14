@@ -1,0 +1,12 @@
+Creating an AWS virtual Private network (VPC)
+
+provider="aws" {		##Define the Provider (environment)
+ region="eu-west-1"		##Region of the provider
+}
+
+resource="aws_vpc""my_production_vpc" {     
+ cidr_block="10.0.0.0/16"      ##Passing the Cidr block
+ tags{
+  Name="Production-VPC"
+  }
+}
